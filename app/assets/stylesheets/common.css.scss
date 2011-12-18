@@ -1,0 +1,34 @@
+$green:#2D4A0C;
+
+body {
+  background: $green image-url("tree.png") no-repeat center top;
+  font-family: 'Niconne', cursive;
+  color: #fff;
+}
+
+a, a:hover, a:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+h1 {
+  padding-top: 490px;
+  font-size: 72px;
+}
+.reduced {
+  margin: 0;
+  paddding:0;
+}
+.center {
+  text-align: center;
+}
+p.large {
+  font-size: 72px;
+}
+p.medium {
+  font-size: 32px;
+  vertical-align: middle;
+}
+p.medium img {
+  vertical-align: middle;
+}
