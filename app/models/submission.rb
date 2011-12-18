@@ -1,4 +1,6 @@
-class Submission < ActiveRecord::Base
-  validates :name,  :presence => true
-  validates :email, :presence => true, :email => true
+class Submission
+  include MongoMapper::Document
+
+  key :name, String,  :required => true
+  key :email, String, :required => true, :email => true
 end
