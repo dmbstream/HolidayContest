@@ -1,3 +1,11 @@
+<div class="center">
+  <%= image_tag("prizes.png") %>
+  <p class="medium">
+  	1st - All 3 2011 Gorge posters<br />
+    2nd - $75 DMB store gift card<br />
+	3rd - $25 DMB store gift card
+  </p>
+</div>
 <%= form_for(@submission) do |f| %>
   <% if @submission.errors.any? %>
     <div id="error_explanation">
@@ -10,16 +18,17 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+  <div class="medium formfields">
+    <div class="field medium">
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </div>
+    <div class="field medium">
+      <%= f.label :email %><br />
+      <%= f.text_field :email %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions center">
+    <%= f.submit "Submit Entry", :class => "btn" %>
   </div>
 <% end %>

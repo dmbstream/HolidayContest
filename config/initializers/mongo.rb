@@ -3,4 +3,6 @@ MongoMapper.config = {
                           'mongodb://localhost/sushi' } 
 }
 
-#MongoMapper.connect(Rails.env)
+#MongoMapper.database = "dmbstream-holidaycontest-#{Rails.env}"
+
+MongoMapper.connect(Rails.env)

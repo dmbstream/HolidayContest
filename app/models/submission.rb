@@ -3,5 +3,5 @@ class Submission
 
   key :name, String, :required => true
   key :email, String, :required => true, :email => true
-
+  timestamps!
 end
