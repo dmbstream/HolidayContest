@@ -1,7 +1,5 @@
 HolidayContest::Application.routes.draw do
-  get "submission/index"
-
-  get "submission/new"
+  resources :submissions
 
   get "home/index"
 

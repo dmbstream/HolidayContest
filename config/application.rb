@@ -50,5 +50,10 @@ module HolidayContest
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    # Make generators work w/ non default settings
+    config.generators do |g|
+      g.orm :mongo_mapper # override active record
+    end
   end
 end
