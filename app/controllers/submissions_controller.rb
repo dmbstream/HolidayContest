@@ -1,6 +1,7 @@
 class SubmissionsController < ApplicationController
   # GET /submissions
   # GET /submissions.json
+=begin
   def index
     @submissions = Submission.all
 
@@ -20,10 +21,14 @@ class SubmissionsController < ApplicationController
       format.json { render json: @submission }
     end
   end
-
+=end
   # GET /submissions/new
   # GET /submissions/new.json
   def new
+    if cookies[:has_submitted].present?
+      return redirect_to thank_you_path
+    end
+
     @submission = Submission.new
 
     respond_to do |format|
@@ -31,12 +36,12 @@ class SubmissionsController < ApplicationController
       format.json { render json: @submission }
     end
   end
-
+=begin
   # GET /submissions/1/edit
   def edit
     @submission = Submission.find(params[:id])
   end
-
+=end
   # POST /submissions
   # POST /submissions.json
   def create
@@ -44,7 +49,8 @@ class SubmissionsController < ApplicationController
 
     respond_to do |format|
       if @submission.save
-        format.html { redirect_to @submission, notice: 'Submission was successfully created.' }
+        cookies[:has_submitted] = true
+        format.html { redirect_to thank_you_path, notice: 'Submission was successfully created.' }
         format.json { render json: @submission, status: :created, location: @submission }
       else
         format.html { render action: "new" }
@@ -52,7 +58,7 @@ class SubmissionsController < ApplicationController
       end
     end
   end
-
+=begin
   # PUT /submissions/1
   # PUT /submissions/1.json
   def update
@@ -80,4 +86,5 @@ class SubmissionsController < ApplicationController
       format.json { head :ok }
     end
   end
+=end  
 end

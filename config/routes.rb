@@ -1,5 +1,11 @@
 HolidayContest::Application.routes.draw do
-  resources :submissions
+
+  get "thank_you" => 'thank_you#index'
+
+#  resources :submissions
+  get 'submissions/new'
+  post 'submissions' => 'submissions#create'
+  match '/submissions' => redirect('/')
 
   get "home/index"
 

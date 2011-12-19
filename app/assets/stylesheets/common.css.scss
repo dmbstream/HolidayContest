@@ -12,10 +12,15 @@ a, a:hover, a:active {
   color: #fff;
   text-decoration: none;
 }
-
+a.link {
+	text-decoration: underline;
+}
 h1 {
   padding-top: 490px;
   font-size: 72px;
+}
+h2 {
+  font-size: 60px;
 }
 .reduced {
   margin: 0;
