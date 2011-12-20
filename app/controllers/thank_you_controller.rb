@@ -1,6 +1,6 @@
 class ThankYouController < ApplicationController
   def index
-    @height = 900
+    @height = 920
   end
 
 end
