@@ -5,4 +5,6 @@ MongoMapper.config = {
 
 #MongoMapper.database = "dmbstream-holidaycontest-#{Rails.env}"
 
-MongoMapper.connect(Rails.env)
+if ENV['MONGOHQ_URL'].present?
+  MongoMapper.connect(Rails.env)
+end
