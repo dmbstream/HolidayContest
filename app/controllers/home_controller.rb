@@ -10,7 +10,7 @@ class HomeController < ApplicationController
         data = ActiveSupport::JSON.decode(json)
         liked = data["page"]["liked"]
         if liked
-          return redirect_to new_submission_path
+          return redirect_to :controller => 'submissions', :action => 'new'
         end
       rescue
         @error = "#{$!}"
