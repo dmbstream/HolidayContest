@@ -10,30 +10,8 @@
   <meta property="fb:app_id" content="257982467594856" />
   <meta property="fb:admins" content="688950931" />
   <meta property="og:image" content="<%= image_path("monkey.png") %>">
-
-  <script src='http://connect.facebook.net/en_US/all.js'></script>
 </head>
 <body>
-	<div id='fb-root'></div>
-	    
-	    <p><a onclick='addToPage(); return false;'>Add to page</a></p>
-	<p id='msg'></p>
-	<script> 
-	      FB.init({appId: "257982467594856", status: true, cookie: true});
-
-	      function addToPage() {
-
-	        // calling the API ...
-	        var obj = {
-	          method: 'pagetab',
-	          redirect_uri: 'http://dmbstream-holidaycontest.herokuapp.com',
-	        };
-
-	        FB.ui(obj);
-	      }
-
-	    </script>
-	
 <h1 class="reduced center">Happy Holidays</h1>
 
 <%= yield %>

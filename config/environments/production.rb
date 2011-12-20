@@ -57,4 +57,9 @@ HolidayContest::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  
+  config.middleware.use ::ExceptionNotifier,
+    :email_prefix => "DMBStreamHoliday: ",
+    :sender_address => %w{do_not_reply@localhost.com},
+    :exception_recipients => %w{jim@biacreations.com}
 end

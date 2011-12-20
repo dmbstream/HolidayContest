@@ -8,6 +8,9 @@ gem 'rails', '3.1.3'
 gem 'mongo_mapper'
 gem 'bson_ext'
 
+# Exception emailer
+gem 'exception_notification'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
