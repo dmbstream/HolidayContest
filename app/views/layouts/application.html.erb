@@ -10,8 +10,14 @@
   <meta property="fb:app_id" content="257982467594856" />
   <meta property="fb:admins" content="688950931" />
   <meta property="og:image" content="<%= image_path("monkey.png") %>">
+
+<script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
 </head>
 <body>
+<div id="fb-root"></div>
+<script type="text/javascript" charset="utf-8">
+    FB.Canvas.setSize();
+</script>
 <h1 class="reduced center">Happy Holidays</h1>
 
 <%= yield %>
