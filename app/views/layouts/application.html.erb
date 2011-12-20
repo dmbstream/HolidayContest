@@ -11,9 +11,14 @@
   <meta property="fb:admins" content="688950931" />
   <meta property="og:image" content="<%= image_path("monkey.png") %>">
 
-<script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
+  <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
+  <script>
+window.fbAsyncInit = function(){  
+    fb.canvas.setautoresize();
+  }
+  </script>
 </head>
-<body>
+<body onload="FB.Canvas.setSize({width: 520, height: 1100})">
 <div id="fb-root"></div>
 <script type="text/javascript" charset="utf-8">
     FB.Canvas.setSize();
