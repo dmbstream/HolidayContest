@@ -1,3 +1,10 @@
+<% unless @error.blank? %>
+ <!-- 
+value: <%= params[:signed_request] %>
+
+Error: <%= @error %>
+-->
+<% end %>
 <p class="center medium">
   <%= image_tag("like.png") %>
 <span>Like us to enter our holiday contest</span>
