@@ -29,6 +29,8 @@ class SubmissionsController < ApplicationController
       return redirect_to thank_you_path
     end
 
+    @height = 1500
+
     @submission = Submission.new
 
     respond_to do |format|
@@ -53,6 +55,7 @@ class SubmissionsController < ApplicationController
         format.html { redirect_to thank_you_path, notice: 'Submission was successfully created.' }
         format.json { render json: @submission, status: :created, location: @submission }
       else
+        @height = 2000
         format.html { render action: "new" }
         format.json { render json: @submission.errors, status: :unprocessable_entity }
       end

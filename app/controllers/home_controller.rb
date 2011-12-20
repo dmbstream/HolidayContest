@@ -16,6 +16,7 @@ class HomeController < ApplicationController
         @error = "#{$!}"
       end
     end
+    @height = 900
   end
 
 end

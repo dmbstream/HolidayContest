@@ -6,6 +6,7 @@ body {
   background: $green image-url("tree.png") no-repeat center top;
   font-family: 'Niconne', cursive;
   color: #fff;
+  overflow:hidden;
 }
 
 a, a:hover, a:active {

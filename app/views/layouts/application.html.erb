@@ -18,7 +18,7 @@ window.fbAsyncInit = function(){
   }
   </script>
 </head>
-<body onload="FB.Canvas.setSize({width: 520, height: 1100})">
+<body onload="FB.Canvas.setSize({width: 520, height: <%= @height %>})">
 <div id="fb-root"></div>
 <script type="text/javascript" charset="utf-8">
     FB.Canvas.setSize();
